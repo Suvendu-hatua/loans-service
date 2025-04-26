@@ -1,6 +1,5 @@
 package com.microservices.eazybank.Loans.entity;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +12,7 @@ import lombok.Setter;
 @Table(name = "loans")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Loans extends Serializers.Base {
+public class Loans extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long loadId;
