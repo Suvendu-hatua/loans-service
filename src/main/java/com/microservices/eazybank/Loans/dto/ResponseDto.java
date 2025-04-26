@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.http.HttpStatus;
 
 @Schema(
         name = "Response",
@@ -19,10 +18,10 @@ public class ResponseDto {
     @Schema(
             description = "Http status of the response",example = "200"
     )
-    private HttpStatus status;
+    private String status;
 
     @Schema(
-            description = "message of response"
+            description = "message of response",example = "Success Message"
     )
     private String message;
 }

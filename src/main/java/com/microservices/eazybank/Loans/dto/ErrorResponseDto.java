@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
 
@@ -25,10 +26,10 @@ public class ErrorResponseDto {
     @Schema(
             description = "Http status of the error response",example = "500"
     )
-    private String status;
+    private HttpStatus status;
 
     @Schema(
-            description = "Description of the error response"
+            description = "Description of the error response",example = "Error Message"
     )
     private String message;
 

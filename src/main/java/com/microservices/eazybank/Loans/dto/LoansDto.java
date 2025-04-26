@@ -5,10 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Schema(
         name = "Loans",
@@ -17,7 +14,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-@AllArgsConstructor
+@NoArgsConstructor
 public class LoansDto {
     @Schema(
             description = "Loan Number of the Customer",example = "345612456789"
