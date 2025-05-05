@@ -27,3 +27,10 @@ spring:
 server:
   port: 8099
 
+# Enabling all the endpoints of Spring boot actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
