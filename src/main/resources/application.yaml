@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: Loan MicroService
+    name: "loans"
     version: v1
 
 #  Database Connection properties
@@ -20,6 +20,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  config:
+    import: "optional:configserver:http://localhost:8071/"
 
 #  setting application port
 server:
