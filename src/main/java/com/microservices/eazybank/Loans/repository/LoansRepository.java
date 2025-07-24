@@ -8,6 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface LoansRepository extends JpaRepository<Loans, Long> {
-    Optional<Loans> findByMobileNumber(String mobileNumber);
-    Optional<Loans> findByLoanNumber(String loanNumber);
+  Optional<Loans> findByMobileNumber(String mobileNumber);
+
+  Optional<Loans> findByLoanNumber(String loanNumber);
 }

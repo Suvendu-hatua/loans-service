@@ -7,11 +7,11 @@ import java.util.Optional;
 
 @Component(value = "auditAwareImpl")
 public class AuditAwareImpl implements AuditorAware<String> {
-    /**
-     * @return
-     */
-    @Override
-    public Optional<String> getCurrentAuditor() {
-        return Optional.of("Banking_MS");
-    }
+  /**
+   * @return Optional<String>
+   */
+  @Override
+  public Optional<String> getCurrentAuditor() {
+    return Optional.of("Banking_MS");
+  }
 }

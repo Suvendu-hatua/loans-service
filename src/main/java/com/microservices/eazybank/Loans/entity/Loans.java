@@ -13,17 +13,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Loans extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long loadId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long loadId;
 
-    @Column(unique = true, nullable = false)
-    private String mobileNumber;
+  @Column(unique = true, nullable = false)
+  private String mobileNumber;
 
-    @Column(unique = true, nullable = false)
-    private String loanNumber;
-    private String loanType;
-    private int totalLoanAmount;
-    private int amountLoanPaid;
-    private int outstandingLoanAmount;
+  @Column(unique = true, nullable = false)
+  private String loanNumber;
+  private String loanType;
+  private int totalLoanAmount;
+  private int amountLoanPaid;
+  private int outstandingLoanAmount;
 }
