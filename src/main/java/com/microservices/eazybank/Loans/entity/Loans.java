@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Loans extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long loadId;
+  private Long loanId;
 
   @Column(unique = true, nullable = false)
   private String mobileNumber;
@@ -23,7 +23,7 @@ public class Loans extends BaseEntity {
   @Column(unique = true, nullable = false)
   private String loanNumber;
   private String loanType;
-  private int totalLoanAmount;
-  private int amountLoanPaid;
-  private int outstandingLoanAmount;
+  private int totalLoan;
+  private int amountPaid;
+  private int outstandingAmount;
 }

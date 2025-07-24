@@ -19,9 +19,9 @@ public class LoansMapper {
     loansDto.setLoanNumber(loans.getLoanNumber());
     loansDto.setLoanType(loans.getLoanType());
     loansDto.setMobileNumber(loans.getMobileNumber());
-    loansDto.setTotalLoanAmount(loans.getTotalLoanAmount());
-    loansDto.setAmountLoanPaid(loans.getAmountLoanPaid());
-    loansDto.setOutstandingLoanAmount(loans.getOutstandingLoanAmount());
+    loansDto.setTotalLoanAmount(loans.getTotalLoan());
+    loansDto.setAmountLoanPaid(loans.getAmountPaid());
+    loansDto.setOutstandingLoanAmount(loans.getOutstandingAmount());
     return loansDto;
   }
 
@@ -37,9 +37,9 @@ public class LoansMapper {
     loans.setLoanNumber(loansDto.getLoanNumber());
     loans.setLoanType(loansDto.getLoanType());
     loans.setMobileNumber(loansDto.getMobileNumber());
-    loans.setTotalLoanAmount(loansDto.getTotalLoanAmount());
-    loans.setAmountLoanPaid(loansDto.getAmountLoanPaid());
-    loans.setOutstandingLoanAmount(loansDto.getOutstandingLoanAmount());
+    loans.setTotalLoan(loansDto.getTotalLoanAmount());
+    loans.setAmountPaid(loansDto.getAmountLoanPaid());
+    loans.setOutstandingAmount(loansDto.getOutstandingLoanAmount());
     return loans;
   }
 }
