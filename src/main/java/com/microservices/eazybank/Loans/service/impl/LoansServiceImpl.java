@@ -41,7 +41,6 @@ public class LoansServiceImpl implements LoansService {
     }
     loansRepository.save(createNewLoan(mobileNumber));
     return true;
-
   }
 
   /**
@@ -86,7 +85,7 @@ public class LoansServiceImpl implements LoansService {
   public boolean deleteLoanDetails(String mobileNumber) {
     Loans loans = loansRepository.findByMobileNumber(mobileNumber)
         .orElseThrow(() -> new ResourceNotFoundException("Loans", "Mobile Number", mobileNumber));
-    loansRepository.deleteById(loans.getLoadId());
+    loansRepository.deleteById(loans.getLoanId());
     return true;
   }
 
@@ -102,9 +101,9 @@ public class LoansServiceImpl implements LoansService {
     //Setting up properties
     loans.setMobileNumber(mobileNumber);
     loans.setLoanType(LoansConstants.HOME_LOAN);
-    loans.setTotalLoanAmount(LoansConstants.NEW_LOAN_LIMIT);
-    loans.setAmountLoanPaid(0);
-    loans.setOutstandingLoanAmount(LoansConstants.NEW_LOAN_LIMIT);
+    loans.setTotalLoan(LoansConstants.NEW_LOAN_LIMIT);
+    loans.setAmountPaid(0);
+    loans.setOutstandingAmount(LoansConstants.NEW_LOAN_LIMIT);
     //Generating Loans Number
     long randomLoanNumber = 100000000000L + random.nextInt(900000000);
     loans.setLoanNumber(Long.toString(randomLoanNumber));

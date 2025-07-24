@@ -7,10 +7,10 @@ spring:
 
 #  Database Connection properties
   datasource:
-    url: ${DB_URL:jdbc:mysql://localhost:3306/eazybank_microservices}
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:root}
-    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:mem:microservices
+    username: sa
+    password:
+    driver-class-name:  org.h2.Driver
 
   #    setting JPA properties
   jpa:
@@ -34,3 +34,5 @@ management:
       exposure:
         include: "*"
 
+build:
+  version: "3.0"
