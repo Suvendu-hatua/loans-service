@@ -7,21 +7,21 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Schema(
-        name = "Response",
-        description = "Schema to hold successful response information"
+    name = "Response",
+    description = "Schema to hold successful response information"
 )
 @Setter
 @Getter
 @ToString
 @AllArgsConstructor
 public class ResponseDto {
-    @Schema(
-            description = "Http status of the response",example = "200"
-    )
-    private String status;
+  @Schema(
+      description = "Http status of the response", example = "200"
+  )
+  private String status;
 
-    @Schema(
-            description = "message of response",example = "Success Message"
-    )
-    private String message;
+  @Schema(
+      description = "message of response", example = "Success Message"
+  )
+  private String message;
 }

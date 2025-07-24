@@ -11,7 +11,7 @@ import java.util.Map;
 @Setter
 @Getter
 public class LoansContactInfoDto {
-    private String message;
-    private Map<String,String> contactDetails;
-    private List<String> onCallSupport;
+  private String message;
+  private Map<String, String> contactDetails;
+  private List<String> onCallSupport;
 }
